@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    font-size: 180%;
+    background: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h3.tittle-w3l {
+    color: #000;
+    font-size: 38px;
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.19);
+}
+
+h3.tittle-w3l span {
+    color: #0879c9;
+    font-size: 50px;
+    letter-spacing: 0;
+}

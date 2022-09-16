@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+    <title>Art Galore | Application</title>
+
+<style>
+
+
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+
+
+/*Subscription Page Content Styles*/
+
+.container {
+    max-width: 960px;
+}
+
+.pricing-header {
+    max-width: 700px;
+}
+
+.card-deck .card {
+    min-width: 200px;
+    height: 400px;
+}
+
+.card-body li { /* Adds line spacing for card descriptions */
+    padding: 8px 0;
+}
+
+
+.card-header {
+    border-bottom: 4px solid #086495;
+
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+
+
+.font-weight-normal { /* For the title on the cards */
+    text-transform: uppercase;
+}
+
+.btn-primary { /* Sign up Button Style */
+    background: #086495;
+    color: #ffffff;
+    border: none;
+
+}
+
+.btn-primary:hover {
+    background: #0a7ab6;
+    color: #ffffff;
+
+}
+
+
+/*Print and Online Page Styles*/
+
+.stepwizard-step p {
+    margin-top: 10px;
+    color: #086495;
+}
+/*
+.stepwizard-row {
+    display: table-row;
+}
+
+.stepwizard {
+    display: table;
+    width: 100%;
+    position: relative;
+}
+
+
+.stepwizard-row:before {
+    top: 14px;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 2px;
+    background-color: #086495;
+
+}
+
+.stepwizard-step {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+}
+
+*/
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+
+}
+
+h3 {
+    font: Roboto, sans-serif;
+    font-weight: 400;
+}
+
+label {
+    color: #086495;
+    font: Roboto, sans-serif;
+    font-weight: 200;
+}
+
+
+
+.nextBtn {
+    background-color: #086495;
+    width: 100px;
+    margin-right: 150px;
+}
+
+
+
+.form-control {
+    width: 50%;
+}
+
+.selectpicker {
+    width: 50%;
+    height: 35px;
+}
+
+select {
+    width: 50%;
+    height: 32px;
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Art Galore</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+
+        </ul>
+    </div>
+</nav>
+
+<br>
+<br>
+
+<div class ="text-center">
+    <h2>Order Placed Successfully.</h2>
+
+    <br>
+    <br>
+
+
+    <div class="text-center" id="step-5">
+        <div class="col-xs-12">
+            <div class="col-md-12">
+
+
+                <label>Choose Payment Method</label> <br/>
+                <select id="pay_method" onchange="displayPayment()">
+                    <option value="NA" selected=""></option>
+                    <option value="C">Paypal</option>
+
+                </select>
+                <br/> <br/><br/><br/>
+
+
+
+
+
+
+
+
+               <a th:href="@{/paymentoptions}" ><button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button></a></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</body>
+
+
+<script>
+
+
+</script>
+</html>
+

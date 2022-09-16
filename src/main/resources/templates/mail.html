@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Art Galore | Application</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Art Galore</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <!--
+             <li class="nav-item">
+                 <a class="nav-link" th:href="@{/home}">Available Jobs</a>
+             </li>
+             -->
+
+        </ul>
+    </div>
+</nav>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+            <h1 class="text-center">Order Details</h1>
+            <div class="card-body">
+
+                <form th:action="@{/shipping}" method="POST" enctype="multipart/form-data">
+
+                    <div class="form-group">
+                        <label> <strong>E-mail</strong></label>
+                        <input type="email" class="form-control" required maxlength="45" name="email"/>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label> <strong>Phone Number</strong></label>
+                        <input type="number" class="form-control" required maxlength="45" name="phone"/>
+
+                    </div>
+
+
+
+                    <div class="form-group ">
+                        <label> <strong>Product Name</strong></label>
+                        <input type="text" class="form-control" required
+                               minlength="3" name="productname"/>
+                    </div>
+
+
+
+                 <!--   <div class="form-group">
+                        <label> <strong>Quantity</strong> </label>
+                        <input type="number" value="0" min="0" class="form-control"
+                                required minlength="15" maxlength="100" name="subject" />
+                    </div>
+
+                    -->
+
+
+                    <div class="form-group">
+                        <label><strong>Total</strong></label>
+                        <input type="number" name="body" required class="form-control" row="6">
+                    </div>
+
+                    <div class="form-group">
+                        <label><strong>General Delivery Area</strong></label>
+                        <input type="text" name="delivery" required class="form-control" row="6">
+                    </div>
+
+
+
+                  <!--  <div class="form-group">
+                        <label> <strong>Attachment</strong> </label>
+                        <input
+                                type="file"
+                                class="form-control"
+
+                                name="attachment"
+                        />
+                    </div>
+-->
+
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary">
+                            Send
+                        </button>
+                    </div>
+
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+
+    <title>Art Galore | Purchase</title>
+    <style>
+        body, html {
+  background-color: #fff;
+  height: 100%;
+  width: 335px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+
+}
+
+
+
+img, div {
+  margin: 0 auto;
+  display: block;
+}
+
+div {
+  margin-bottom: 20px;
+}
+
+h1 {
+  display: block;
+  border-bottom: 1px solid #c21807;
+}
+
+h3, label {
+  font-weight: 700;
+  font-size: 23px;
+}
+
+img {
+  width: 261px;
+}
+
+input {
+  width: 50px;
+  float: right;
+}
+
+span {
+  float: right;
+  color: #c21807;
+}
+
+.pay-button {
+  background-color: white;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 16px 32px;
+  width: 170px;
+  background-color: #c21807;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin: 20px 0 0 170px;
+  display: block;
+}
+
+.pay-button:hover {
+  background-color: #f31e09;
+}
+
+.pay-button:focus {
+  outline: 0;
+}
+
+.currency {
+  margin-top: -50px;
+  margin-left: 240px;
+  position: absolute;
+  color: #c21807;
+}
+
+#subTotalText {
+  margin-top: -50px;
+  float: right;
+  color: #c21807;
+}
+
+#message {
+  float: left;
+  margin-top: 0px;
+  position: absolute;
+  display: none;
+}
+
+
+
+
+
+    </style>
+
+</head>
+
+
+
+
+
+<div class="close" style="width:500px">
+
+    <br>
+    <h1>Art Galore</h1>
+
+    <img th:src="@{${'/book/display/'+id}}" style="width:150px"
+         class="img img-responsive img-fluid"
+         alt="">
+
+    <h3 class="product">Product:<span th:text="${name}" class="mb-3"></span></h3>
+    <h3 class="price">Price:<span class="item_price" th:text="${price}"></span></h3>
+    <h3 style="display: flex; justify-content: space-between;">
+        <label for="amount">Quantity</label>
+        <input id="amount" type="number" value="0" min="0">
+    </h3>
+
+    <h3 class="price">SubTotal:</h3>
+    <h3><div class="currency"></div><div id="subTotalText">  </div></h3>
+
+
+
+    <a th:href="@{/shipping}"><button class="pay-button">Check Out</button></a>
+
+    <span id="message"></span>
+
+</div>
+
+
+</body>
+
+<script>
+
+let quantity= document.getElementById('amount');
+let subtotal=document.getElementById('subTotalText')
+let price = document.querySelector('.item_price')
+console.log(price.innerHTML)
+
+quantity.addEventListener('change', (e)=>{
+    let q = e.target.value
+    let p = price.innerHTML
+    getSubTotal(q,p)
+})
+let getSubTotal = (quantity,p)=>{
+    let subTotals = quantity*p
+    subtotal.innerHTML = subTotals
+}
+
+
+
+
+
+
+</script>
+</html>
